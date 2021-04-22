@@ -8,11 +8,11 @@ NKN_LOG_DIR="$NKN_DIR/Log"
 # 格式错误 或者 地址错误 使用 脚本作者的地址
 # BENEFICIARY_ADDR=`cat /root/nkn_beneficiary_addr`
 
-# 改为 参数形式 如 ./nkn.sh NKNZvTCfzCGQXx1mTpL6qtQrmZnX1CBtcHui
+# 改为 参数形式 如 ./nkn.sh NKNV4hbx3QfFQgrGbxzBMt7LeeDfQ3toBeMJ
 BENEFICIARY_ADDR=$1
 
 if [ ${#BENEFICIARY_ADDR} != 36 ];then
-    BENEFICIARY_ADDR="NKNZvTCfzCGQXx1mTpL6qtQrmZnX1CBtcHui"
+    BENEFICIARY_ADDR="NKNV4hbx3QfFQgrGbxzBMt7LeeDfQ3toBeMJ"
 fi
 echo $BENEFICIARY_ADDR
 
