@@ -6,3 +6,4 @@ sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_
 service sshd restart
 
 exit 0
+
