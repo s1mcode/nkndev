@@ -35,6 +35,7 @@ apt-get install -y unzip net-tools psmisc git htop nano haveged supervisor nginx
 #step 1.2
 cd /root
 wget -O - CHAINDB_PATH -q | tar -xzf - 
+wait
 #step 1.2
 
 # step 2.1 (nkn config.mainnet.json)
