@@ -35,10 +35,9 @@ apt-get install -y unzip net-tools psmisc git htop nano haveged supervisor nginx
 #step 1.2
 cd /root
 wget -O - CHAINDB_PATH -q | tar -xzf - 
-wait
 #step 1.2
-
-# step 2.1 (nkn config.mainnet.json)
+if [ $? -eq 0 ]; then
+    # step 2.1 (nkn config.mainnet.json)
 cd $NKN_DIR
 wget https://raw.githubusercontent.com/nknorg/nkn/master/config.mainnet.json
 mv config.mainnet.json config.json
@@ -81,6 +80,11 @@ fi
 cd $NKN_COMMERCIAL_DIR
 $NKN_COMMERCIAL_DIR/nkn-commercial install
 # step 2.3
+else
+    echo "Download chandb failed!"
+fi
+
+
 
 exit 0
 
